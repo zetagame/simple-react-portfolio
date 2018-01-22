@@ -1,0 +1,92 @@
+@import 'colors.scss';
+
+#greeting {
+  height: 100vh;
+  .greeting-message {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    color: $white;
+    transform: scale(1) translate3d(-50%, -50%, 0);
+    z-index: 2;
+    font-weight: bold;
+    font-size: 1.75rem;
+    max-width: 100%;
+    white-space:nowrap;
+    filter: blur(0px);
+    transition: filter .3s ease;
+    &.blur {
+      filter: blur(7px);
+    }
+    @media(max-width: 767px) {
+      height: 0;
+      position: relative;
+      top: 100px;
+      left: 0;
+      transform: initial;
+      white-space: initial;
+      font-size: 4rem;
+    }
+  }
+  .blinking-cursor {
+  font-weight: 100;
+  font-size: 30px;
+  color: #2E3D48;
+  position: relative;
+  top: -3px;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+  @media(max-width:767px) {
+    font-size: 3.5rem;
+    top: -8px;
+  }
+}
+
+@keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: $white;
+  }
+}
+
+@-moz-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: $white;
+  }
+}
+
+@-webkit-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: $white;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: $white;
+  }
+}
+
+@-o-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: $white;
+  }
+}
+}

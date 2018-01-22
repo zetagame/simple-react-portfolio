@@ -1,0 +1,102 @@
+{
+  "projects": [
+    {
+      "title":"Sweater Beats",
+      "url":"https://www.zackhaighdesign.com/sweaters",
+      "img":"../src/img/sweatersTile.png",
+      "description":"React web app with BandsInTown enabled content management.",
+      "fadeInClass":"fade-in-left"
+    },
+    {
+      "title":"Carver150",
+      "url":"https://www.zackhaighdesign.com/carver150",
+      "img":"../src/img/carverTile.png",
+      "description":"Website with CMS and blog for restaraunt with menu that changes daily.",
+      "fadeInClass":"fade-in-center"
+    },
+    {
+      "title":"Divine Yoga",
+      "url":"https://www.zackhaighdesign.com/divinedemo",
+      "img":"../src/img/divineTile.png",
+      "description":"Masonry website with CMS for listing events real-time.",
+      "fadeInClass": "fade-in-right"
+    }
+  ],
+  "skills": [
+    {
+      "title":"LESS/SASS(CSS3)",
+      "level":5
+    },
+    {
+      "title":"HTML5",
+      "level":5
+    },
+    {
+      "title":"Vanilla Javascript",
+      "level":4
+    },
+    {
+      "title":"jQuery",
+      "level": 5
+    },
+    {
+      "title":"React",
+      "level": 4
+    },
+    {
+      "title":"Knockout/Kendo",
+      "level": 4
+    },
+    {
+      "title":"C#",
+      "level": 3
+    },
+    {
+      "title":"Razor MVC",
+      "level": 3
+    },
+    {
+      "title":"Photoshop",
+      "level": 5
+    },
+    {
+      "title":"Illustrator",
+      "level": 4
+    },
+    {
+      "title":"Axure",
+      "level": 4
+    },
+    {
+      "title":"Typography",
+      "level": 4
+    }
+  ],
+  "experience":
+  [
+    {
+      "workplace":"GreenSlate (Current Job)",
+      "year":2016,
+      "position":"Frond End Developer",
+      "responsibilities":"I joined GreenSlate (formerly IndiePay) during a transitionary period in 2016. An up-and-coming software startup owned by a Delhi-based film and television accounting company, IndiePay was outgrowing it's old shoes fast, and to this day is rapidly expanding its grasp on a multi-billion dollar industry. My main responsibilities include maintaining the front end of their application, including writing razor and kendoUI templates, maintaining their LESS, and writing Javascript for front end features, as well as rebranding their entire front end to GreenSlate in around two weeks. If you need an app to manage your film/tv show/network’s payroll, timecards, and start work, you should probably hit us up."
+    },
+    {
+      "workplace":"New York Society of Security Analysts",
+      "year":2015,
+      "position":"Digital Media Assistant",
+      "responsibilities":"At NYSSA (now the CFA Society of NY) I created advertisements and site content, refactored their website navigation and helped Identify and remove redunt pages. I found and addressed several back-end issues that improved server performance and site load times, and was responsible for filming and uploading video content and lectures."
+    },
+    {
+      "workplace":"Arana Interactive",
+      "year":2014,
+      "position":"Creative Director",
+      "responsibilities":"Long story short, graphic designer > front end developer > creative director. I joined as a graphic designer, and studied web development under award winning software engineer Luis Arana. My responsibilities included branding-design and front end development, for clients ranging from multi-national franchises like SPiN to small businesses like Ambulette. Most of my development work was HTML5 and CSS3 (SASS for larger scale clientel)."
+    },
+    {
+      "workplace":"Freelance",
+      "year":2013,
+      "position":"Full Stack Developer",
+      "responsibilities":"Starting in 2013, I began freelancing full-time, and continue to do so when I'm between jobs or on vacation. Projects I completed without other developers are listed in the 'Projects' section above. These are sites and web apps I created from scratch, usually on extremely tight deadlines. Some of these are pretty old, so the coding standards don't match what you might find in my recent work."
+    }
+  ]
+}

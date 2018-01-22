@@ -1,0 +1,57 @@
+@import 'colors.scss';
+
+.form-group {
+  position: relative;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  textarea.z-input.fancy ~ label {
+    display:none
+  }
+  .z-input {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    background-color: transparent;
+    background-clip: padding-box;
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid $mediumGray;
+    padding-left: 0;
+    padding-bottom: 0px;
+    transition: all .2s ease;
+    ~ label {
+      position: absolute;
+      top: 6px;
+      transition: all .2s ease;
+      color: $mediumGray;
+      pointer-events: none;
+      touch-action: none;
+    }
+    &:hover, &:focus {
+      border-bottom-color: black;
+    }
+    &:hover, &.fancy {
+      ~ label {
+        color: $black;
+      }
+    }
+    &:focus {
+      ~ label {
+        font-weight: bold;
+      }
+    }
+    &[required] ~ label:after {
+      content:' *';
+      position: relative;
+      display: inline;
+      color: $black;
+    }
+  }
+}
+
+//Cool material shit happening here...
+.z-input:focus ~ label, .z-input.fancy ~ label {
+    font-size: 12px;
+    top: -14px;
+    color: black;
+}

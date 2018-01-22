@@ -1,0 +1,45 @@
+@import 'colors.scss';
+
+#projects {
+  a {
+    text-decoration: none;
+    color: $darkGray;
+  }
+  .project-title {
+    font-weight: bold;
+  }
+  .project-image {
+    max-width: 100%;
+  }
+  .project-description {
+    font-size: .75rem;
+  }
+  .card {
+    .card-img-wrapper {
+      position: relative;
+      &:before {
+        content: 'LIVE DEMO';
+        position: absolute;
+        background: $black;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: 10px;
+        opacity: 0;
+        transition: opacity .2s ease;
+        font-size: 18px;
+        font-weight: 500px;
+      }
+    }
+    &:hover {
+      .card-img-wrapper:before {
+        opacity: .9;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import 'colors.scss';
+.skill-list {
+  @media (min-width: 768px) {
+    width: 670px;
+    text-align: right;
+  }
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  .skill-column {
+    white-space: nowrap;
+    &:nth-child(3n-1) {
+      @media (min-width: 768px) {
+        margin-left: -25px;
+        margin-right: 25px;
+      }
+    }
+  }
+  .skill-circle {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: $black;
+    display: inline-block;
+    margin-right: 2px;
+    @media (max-width: 767px) {
+      position: relative;
+      top: -11px;
+    }
+    &.filled {
+      background-color: $red;
+    }
+  }
+  .title {
+    @media (max-width: 767px) {
+      display: block;
+    }
+  }
+}
