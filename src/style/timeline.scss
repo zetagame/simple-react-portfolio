@@ -92,7 +92,8 @@
         color: #fff;
         background: #dedede;
         border-radius: 50%;
-        box-shadow: 0 0 0 4px $darkGray;
+        -webkit-box-shadow: 0 0 0 4px $darkGray;
+                box-shadow: 0 0 0 4px $darkGray;
         text-align: center;
         left: 120px;
         top: 8px;

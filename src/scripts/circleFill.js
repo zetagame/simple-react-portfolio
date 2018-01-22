@@ -1,4 +1,5 @@
 //Fill circles
+
 window.circleFill = function(index) {
 debugger;
   const total = (typeof total) === 'undefined' ? index : total;
@@ -8,7 +9,7 @@ debugger;
     index--;
     let newIndex = index;
     setTimeout(function(newIndex) {
-  		circleFill(newIndex);
+  		circleFill();
 		}, 500);
 	}
 }

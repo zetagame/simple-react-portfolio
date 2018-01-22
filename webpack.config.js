@@ -1,34 +1,37 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const webpack = require('webpack');
 const extractSass = new ExtractTextPlugin({
-    filename: "style.css",
-    disable: false
-    //disable: process.env.NODE_ENV === "development"
-});
-
+  filename: "main.css",
+})
 module.exports = {
-  entry: [
-    './src/index.js'
-  ],
+  entry: {
+    "bundle": "./src/index.js",
+    "bundle.min": "./src/index.js",
+  },
   output: {
     path: __dirname,
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: '[name].js'
   },
   module: {
     rules: [
-      //Sass
+      //React/Babel
       {
+        test: /.js?$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['react', 'es2015', 'stage-1']
+        }
+      },
+      {  //Sass
         exclude: /node_modules/,
         test: /\.scss$/,
-        use: [{
-            loader: "style-loader" // creates style nodes from JS strings
-        }, {
-            loader: "css-loader" // translates CSS into CommonJS
-        }, {
-            loader: "sass-loader" // compiles Sass to CSS
-        }]
+        use:  extractSass.extract({
+          use: ['css-loader', 'resolve-url-loader', 'sass-loader']
+        })
       },
       {
         test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
@@ -44,20 +47,15 @@ module.exports = {
           'file-loader?name=images/[name].[ext]',
           'image-webpack-loader?bypassOnDebug'
         ]
-      },
-            //React/Babel
-      {
-        test: /.js?$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['react', 'es2015', 'stage-1']
-        }
-      },
+      }
     ]
   },
   plugins: [
-    extractSass
+    extractSass,
+    new webpack.optimize.UglifyJsPlugin({
+      include: /\.min\.js$/,
+      minimize: true
+    })
   ],
   resolve: {
     extensions: ['.js', '.jsx']

@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <div id="contact"  className="section">
       <h1>Contact</h1>
-      <form action="mailer.php" method="post">
+      <form action="/src/contact.php" method="post">
         <div className="form-group fade-in fade-in-center">
           <input className="z-input" type="text" name="subject" required/>
           <label htmlFor="subject">Subject</label>
@@ -16,7 +16,7 @@ const Contact = () => {
           <label htmlFor="name">Name</label>
         </div>
         <div className="form-group fade-in fade-in-center">
-          <input className="z-input" type="text" name="_replyto" required/>
+          <input className="z-input" type="text" name="email" required/>
           <label htmlFor="email">Email</label>
         </div>
         <div className="form-group fade-in fade-in-center">
@@ -24,7 +24,7 @@ const Contact = () => {
           <label htmlFor="phone">Phone</label>
         </div>
         <div className="form-group fade-in fade-in-center">
-          <textarea className="z-input" type="message"></textarea>
+          <textarea className="z-input" name="message" required></textarea>
           <label htmlFor="message">Message</label>
         </div>
         <button type="submit" value="send" className="btn btn-default">Submit</button>

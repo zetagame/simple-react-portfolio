@@ -3,21 +3,21 @@
     {
       "title":"Sweater Beats",
       "url":"https://www.zackhaighdesign.com/sweaters",
-      "img":"../src/img/sweatersTile.png",
+      "img":"./../src/img/sweatersTile.png",
       "description":"React web app with BandsInTown enabled content management.",
       "fadeInClass":"fade-in-left"
     },
     {
       "title":"Carver150",
       "url":"https://www.zackhaighdesign.com/carver150",
-      "img":"../src/img/carverTile.png",
+      "img":"./../src/img/carverTile.png",
       "description":"Website with CMS and blog for restaraunt with menu that changes daily.",
       "fadeInClass":"fade-in-center"
     },
     {
       "title":"Divine Yoga",
       "url":"https://www.zackhaighdesign.com/divinedemo",
-      "img":"../src/img/divineTile.png",
+      "img":"./../src/img/divineTile.png",
       "description":"Masonry website with CMS for listing events real-time.",
       "fadeInClass": "fade-in-right"
     }

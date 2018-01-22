@@ -3,9 +3,14 @@
   text-transform: uppercase;
   font-weight: 900;
   background: transparent;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
   transition: all .2s ease;
   a {
+    -webkit-transition: color .2s ease;
+    -o-transition: color .2s ease;
     transition: color .2s ease;
     color: $white;
   }
@@ -15,6 +20,8 @@
     padding: 5px;
     padding-top: 0px;
     padding-bottom: 0px;
+    -webkit-transition: border-color .2s ease;
+    -o-transition: border-color .2s ease;
     transition: border-color .2s ease;
     @media (max-width: 767px) {
       display: none;
@@ -26,9 +33,13 @@
     font-size: 10px;
     text-align: right;
     .nav-link {
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
       width: fit-content;
       margin-left: auto;
       color: $white!important;
+      -webkit-transition: color .2s ease;
+      -o-transition: color .2s ease;
       transition: color .2s ease;
     }
   }
@@ -41,7 +52,8 @@
       background-color: transparent;
       border: none;
       outline: none;
-      box-shadow: none;
+      -webkit-box-shadow: none;
+              box-shadow: none;
       &:before {
         content: "ZH";
         position: absolute;
@@ -64,7 +76,8 @@
   &.scrolled {
     background-color: $white;
     color: $red;
-    box-shadow: 0px 2px 8px $verySpecificGray;
+    -webkit-box-shadow: 0px 2px 8px $verySpecificGray;
+            box-shadow: 0px 2px 8px $verySpecificGray;
     a {
       color: $red;
     }
@@ -83,7 +96,8 @@
       }
       &[aria-expanded=true] {
         background: darken($white, 5);
-        box-shadow: inset 0px 0 3px darken($white, 25);
+        -webkit-box-shadow: inset 0px 0 3px darken($white, 25);
+                box-shadow: inset 0px 0 3px darken($white, 25);
         border: 1px solid darken($white, 25);
       }
       &:before {

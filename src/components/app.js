@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Scrollbar from 'smooth-scrollbar';
 import portfolioData from '../data/portfolioData.json';
 import Header from './header';
 import Greeting from './greeting';
@@ -9,7 +10,6 @@ import Contact from './contact';
 import '../scripts/fader.js';
 import '../scripts/ui.js';
 import '../scripts/typist.js';
-import '../scripts/circleFill.js';
 
 export default class App extends Component {
   constructor(props) {
@@ -21,7 +21,6 @@ export default class App extends Component {
     skills: portfolioData.skills,
     jobs: portfolioData.experience
   };
-
   render() {
     return (
       <div className="content">

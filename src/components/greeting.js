@@ -4,7 +4,7 @@ class Greeting extends Component{
   componentDidMount(){
     const particles = document.createElement('script');
     particles.type = 'text/javascript';
-    particles.src = './src/scripts/particles.js';
+    particles.src = '/src/scripts/particles.js';
     this.instance.appendChild(particles);
     const landingPageText = [
       'modular.',

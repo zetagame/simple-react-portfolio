@@ -7,7 +7,7 @@ const SkillItem = ({skill}) => {
   const unfilledCircles = totalCircles - level;
   let circles = [];
   for (var i=0; i < level; i++) {
-    circles.push(<span className={"skill-circle fill-" + i} key={i}></span>);
+    circles.push(<span className="skill-circle filled" key={i}></span>);
   }
   for (var i=0; i < unfilledCircles; i++) {
     circles.push(<span className="skill-circle" key={i + 50}></span>);
