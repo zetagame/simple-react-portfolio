@@ -3153,21 +3153,21 @@
     .navbar.scrolled .nav-item .nav-link {
       color: #ED1C24 !important; }
 
-.skill-list {
+#skills .skill-list {
   text-align: center;
   margin-left: auto;
   margin-right: auto; }
   @media (min-width: 768px) {
-    .skill-list {
+    #skills .skill-list {
       width: 670px;
       text-align: right; } }
-  .skill-list .skill-column {
+  #skills .skill-list .skill-column {
     white-space: nowrap; }
     @media (min-width: 768px) {
-      .skill-list .skill-column:nth-child(3n-1) {
+      #skills .skill-list .skill-column:nth-child(3n-1) {
         margin-left: -25px;
         margin-right: 25px; } }
-  .skill-list .skill-circle {
+  #skills .skill-list .skill-circle {
     height: 8px;
     width: 8px;
     border-radius: 50%;
@@ -3175,14 +3175,22 @@
     display: inline-block;
     margin-right: 2px; }
     @media (max-width: 767px) {
-      .skill-list .skill-circle {
+      #skills .skill-list .skill-circle {
         position: relative;
         top: -11px; } }
-    .skill-list .skill-circle.filled {
+    #skills .skill-list .skill-circle.filled {
       background-color: #ED1C24; }
   @media (max-width: 767px) {
-    .skill-list .title {
+    #skills .skill-list .title {
       display: block; } }
+
+#skills .btn-default.download-button {
+  color: #FFFFFF;
+  background: #ED1C24;
+  font-weight: 400;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.5rem; }
 
 #projects a {
   text-decoration: none;
@@ -3283,7 +3291,7 @@ canvas {
   #greeting .blinking-cursor {
     font-weight: 100;
     font-size: 30px;
-    color: #2E3D48;
+    color: #FFFFFF;
     position: relative;
     top: -3px;
     -webkit-animation: 1s blink step-end infinite;
@@ -3293,13 +3301,13 @@ canvas {
         font-size: 3.5rem;
         top: -8px; } }
 
-@keyframes "blink" {
+@-webkit-keyframes "blink" {
   from, to {
     color: transparent; }
   50% {
     color: #FFFFFF; } }
 
-@-webkit-keyframes "blink" {
+@keyframes "blink" {
   from, to {
     color: transparent; }
   50% {

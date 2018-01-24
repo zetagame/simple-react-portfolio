@@ -41,7 +41,7 @@
   .blinking-cursor {
     font-weight: 100;
     font-size: 30px;
-    color: #2E3D48;
+    color: $white;
     position: relative;
     top: -3px;
     -webkit-animation: 1s blink step-end infinite;
@@ -52,7 +52,7 @@
     }
   }
 
-  @keyframes "blink" {
+  @-webkit-keyframes "blink" {
     from, to {
       color: transparent;
     }
@@ -60,8 +60,7 @@
       color: $white;
     }
   }
-
-  @-webkit-keyframes "blink" {
+  @keyframes "blink" {
     from, to {
       color: transparent;
     }

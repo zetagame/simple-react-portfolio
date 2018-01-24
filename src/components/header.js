@@ -16,13 +16,13 @@ const Header = () => {
         <div className="collapse navbar-collapse" id="mainNavigation">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
+              <a className="nav-link" href="#projects">Projects</a>
+            </li>
+            <li className="nav-item">
               <a className="nav-link" href="#experience">Resume</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#skills">Skills</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#projects">Projects</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#contact">Contact</a>

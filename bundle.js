@@ -23348,6 +23348,15 @@ var Header = function Header() {
           { className: 'nav-item' },
           _react2.default.createElement(
             'a',
+            { className: 'nav-link', href: '#projects' },
+            'Projects'
+          )
+        ),
+        _react2.default.createElement(
+          'li',
+          { className: 'nav-item' },
+          _react2.default.createElement(
+            'a',
             { className: 'nav-link', href: '#experience' },
             'Resume'
           )
@@ -23359,15 +23368,6 @@ var Header = function Header() {
             'a',
             { className: 'nav-link', href: '#skills' },
             'Skills'
-          )
-        ),
-        _react2.default.createElement(
-          'li',
-          { className: 'nav-item' },
-          _react2.default.createElement(
-            'a',
-            { className: 'nav-link', href: '#projects' },
-            'Projects'
           )
         ),
         _react2.default.createElement(
@@ -23713,6 +23713,15 @@ var SkillList = function SkillList(props) {
       'div',
       { className: 'row skill-list' },
       skillItems
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'row' },
+      _react2.default.createElement(
+        'a',
+        { className: 'btn btn-default download-button', href: 'http://zackhaighdesign.com/my_files/resumezh2018.pdf' },
+        'Printer Friendly Version'
+      )
     )
   );
 };
