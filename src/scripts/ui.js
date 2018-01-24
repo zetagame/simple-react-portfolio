@@ -6,9 +6,10 @@ $(document).ready(function() {
 
   //ScrollFix
   const offset = 56;
-  $('.navbar li a').click(function(event) {
-      event.preventDefault();
-      $($(this).attr('href'))[0].scrollIntoView();
-      scrollBy(0, -offset);
-  });
+  $('body').on('click', 'li a[href]', function(e) {
+    e.preventDefault();
+    let scrollDistance =  $($(this).attr('href')).offset().top - offset + "px";
+    $('html, body').animate(
+    {scrollTop:scrollDistance})
+  })
 });

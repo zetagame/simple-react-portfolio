@@ -23933,7 +23933,7 @@ $(form).submit(function (event) {
 
 
 $(document).ready(function () {
-  $(window).scroll(function () {
+  function fadeInItems() {
     $('.fade-in:not(.showFade)').each(function (i) {
       var leading = 0;
       if ($(this).hasClass('leading')) {
@@ -23948,7 +23948,11 @@ $(document).ready(function () {
         $(this).addClass('showFade');
       }
     });
+  }
+  $(window).scroll(function () {
+    fadeInItems();
   });
+  fadeInItems();
 });
 
 /***/ }),
@@ -23966,10 +23970,10 @@ $(document).ready(function () {
 
   //ScrollFix
   var offset = 56;
-  $('.navbar li a').click(function (event) {
-    event.preventDefault();
-    $($(this).attr('href'))[0].scrollIntoView();
-    scrollBy(0, -offset);
+  $('body').on('click', 'li a[href]', function (e) {
+    e.preventDefault();
+    var scrollDistance = $($(this).attr('href')).offset().top - offset + "px";
+    $('html, body').animate({ scrollTop: scrollDistance });
   });
 });
 
