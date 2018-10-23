@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 $(document).ready(function() {
   var fancify = function(element) {
     element.value.length !== 0 ? $(element).addClass('fancy') : $(element).removeClass('fancy');

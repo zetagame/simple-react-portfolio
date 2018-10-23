@@ -7,6 +7,28 @@
 /* v2.0.0
 /* ----------------------------------------------- */
 
+const requestAnimFrame = (function(){
+  return  window.requestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.mozRequestAnimationFrame    ||
+    window.oRequestAnimationFrame      ||
+    window.msRequestAnimationFrame     ||
+    function(callback){
+      window.setTimeout(callback, 1000 / 60);
+    };
+})();
+
+const cancelRequestAnimFrame = (function() {
+  return window.cancelAnimationFrame         ||
+    window.webkitCancelRequestAnimationFrame ||
+    window.mozCancelRequestAnimationFrame    ||
+    window.oCancelRequestAnimationFrame      ||
+    window.msCancelRequestAnimationFrame     ||
+    clearTimeout
+} )();
+
+let pJSDom = [];
+
 var pJS = function(tag_id, params){
 
   var canvas_el = document.querySelector('#'+tag_id+' > .particles-js-canvas-el');
@@ -1310,11 +1332,8 @@ var pJS = function(tag_id, params){
 
 
   pJS.fn.vendors.draw = function(){
-
     if(pJS.particles.shape.type == 'image'){
-
       if(pJS.tmp.img_type == 'svg'){
-
         if(pJS.tmp.count_svg >= pJS.particles.number.value){
           pJS.fn.particlesDraw();
           if(!pJS.particles.move.enable) cancelRequestAnimFrame(pJS.fn.drawAnimFrame);
@@ -1323,9 +1342,7 @@ var pJS = function(tag_id, params){
           //console.log('still loading...');
           if(!pJS.tmp.img_error) pJS.fn.drawAnimFrame = requestAnimFrame(pJS.fn.vendors.draw);
         }
-
       }else{
-
         if(pJS.tmp.img_obj != undefined){
           pJS.fn.particlesDraw();
           if(!pJS.particles.move.enable) cancelRequestAnimFrame(pJS.fn.drawAnimFrame);
@@ -1333,23 +1350,18 @@ var pJS = function(tag_id, params){
         }else{
           if(!pJS.tmp.img_error) pJS.fn.drawAnimFrame = requestAnimFrame(pJS.fn.vendors.draw);
         }
-
       }
-
     }else{
       pJS.fn.particlesDraw();
       if(!pJS.particles.move.enable) cancelRequestAnimFrame(pJS.fn.drawAnimFrame);
       else pJS.fn.drawAnimFrame = requestAnimFrame(pJS.fn.vendors.draw);
     }
-
   };
 
 
   pJS.fn.vendors.checkBeforeDraw = function(){
-
     // if shape is image
     if(pJS.particles.shape.type == 'image'){
-
       if(pJS.tmp.img_type == 'svg' && pJS.tmp.source_svg == undefined){
         pJS.tmp.checkAnimFrame = requestAnimFrame(check);
       }else{
@@ -1359,19 +1371,14 @@ var pJS = function(tag_id, params){
           pJS.fn.vendors.init();
           pJS.fn.vendors.draw();
         }
-
       }
-
     }else{
       pJS.fn.vendors.init();
       pJS.fn.vendors.draw();
     }
 
   };
-
-
   pJS.fn.vendors.init = function(){
-
     /* init canvas + particles */
     pJS.fn.retinaInit();
     pJS.fn.canvasInit();
@@ -1379,10 +1386,8 @@ var pJS = function(tag_id, params){
     pJS.fn.canvasPaint();
     pJS.fn.particlesCreate();
     pJS.fn.vendors.densityAutoParticles();
-
     /* particles.line_linked - convert hex colors to rgb */
     pJS.particles.line_linked.color_rgb_line = hexToRgb(pJS.particles.line_linked.color);
-
   };
 
 
@@ -1426,25 +1431,7 @@ Object.deepExtend = function(destination, source) {
   return destination;
 };
 
-window.requestAnimFrame = (function(){
-  return  window.requestAnimationFrame ||
-    window.webkitRequestAnimationFrame ||
-    window.mozRequestAnimationFrame    ||
-    window.oRequestAnimationFrame      ||
-    window.msRequestAnimationFrame     ||
-    function(callback){
-      window.setTimeout(callback, 1000 / 60);
-    };
-})();
 
-window.cancelRequestAnimFrame = ( function() {
-  return window.cancelAnimationFrame         ||
-    window.webkitCancelRequestAnimationFrame ||
-    window.mozCancelRequestAnimationFrame    ||
-    window.oCancelRequestAnimationFrame      ||
-    window.msCancelRequestAnimationFrame     ||
-    clearTimeout
-} )();
 
 function hexToRgb(hex){
   // By Tim Down - http://stackoverflow.com/a/5624139/3493650
@@ -1472,10 +1459,8 @@ function isInArray(value, array) {
 
 /* ---------- particles.js functions - start ------------ */
 
-window.pJSDom = [];
-
-window.particlesJS = function(tag_id, params){
-
+const particlesJS = function(tag_id, params){
+debugger;
   //console.log(params);
 
   /* no string id? so it's object params, and set the id with default id */
@@ -1516,27 +1501,6 @@ window.particlesJS = function(tag_id, params){
   if(canvas != null){
     pJSDom.push(new pJS(tag_id, params));
   }
-
-};
-
-window.particlesJS.load = function(tag_id, path_config_json, callback){
-
-  /* load json config */
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET', path_config_json);
-  xhr.onreadystatechange = function (data) {
-    if(xhr.readyState == 4){
-      if(xhr.status == 200){
-        var params = JSON.parse(data.currentTarget.response);
-        window.particlesJS(tag_id, params);
-        if(callback) callback();
-      }else{
-        console.log('Error pJS - XMLHttpRequest status: '+xhr.status);
-        console.log('Error pJS - File config not found');
-      }
-    }
-  };
-  xhr.send();
 
 };
 

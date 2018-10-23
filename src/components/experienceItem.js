@@ -3,7 +3,6 @@ import React from 'react';
 const ExperienceItem = ({job}) => {
   const workplace = job.workplace;
   const year = job.year;
-  const position = job.position;
   const responsibilities = job.responsibilities;
   return (
     <li className="fade-in fade-in-center leading leading-sm">

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Scrollbar from 'smooth-scrollbar';
 import portfolioData from '../data/portfolioData.json';
 import Header from './header';
 import Greeting from './greeting';
@@ -12,10 +11,6 @@ import '../scripts/ui.js';
 import '../scripts/typist.js';
 
 export default class App extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   static defaultProps = {
     projects: portfolioData.projects,
     skills: portfolioData.skills,

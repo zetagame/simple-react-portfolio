@@ -3,21 +3,21 @@
     {
       "title":"Sweater Beats",
       "url":"https://www.zackhaighdesign.com/sweaters",
-      "img":"./../src/img/sweatersTile.png",
+      "img":"sweatersTile.png",
       "description":"React web app with BandsInTown enabled content management.",
       "fadeInClass":"fade-in-left"
     },
     {
       "title":"Carver150",
       "url":"https://www.zackhaighdesign.com/carver150",
-      "img":"./../src/img/carverTile.png",
+      "img":"carverTile.png",
       "description":"Website with CMS and blog for restaraunt with menu that changes daily.",
       "fadeInClass":"fade-in-center"
     },
     {
       "title":"Divine Yoga",
       "url":"https://www.zackhaighdesign.com/divinedemo",
-      "img":"./../src/img/divineTile.png",
+      "img":"divineTile.png",
       "description":"Masonry website with CMS for listing events real-time.",
       "fadeInClass": "fade-in-right"
     }
@@ -84,7 +84,7 @@
       "workplace":"New York Society of Security Analysts",
       "year":2015,
       "position":"Digital Media Assistant",
-      "responsibilities":"At NYSSA (now the CFA Society of NY) I created advertisements and site content, refactored their website navigation and helped Identify and remove redunt pages. I found and addressed several back-end issues that improved server performance and site load times, and was responsible for filming and uploading video content and lectures."
+      "responsibilities":"At NYSSA (now the CFA Society of NY) I created advertisements and site content, refactored their website navigation and helped Identify and remove redundant pages. I found and addressed several back-end issues that improved server performance and site load times, and was responsible for filming and uploading video content and lectures."
     },
     {
       "workplace":"Arana Interactive",

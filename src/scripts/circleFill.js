@@ -1,5 +1,4 @@
 //Fill circles
-
 window.circleFill = function(index) {
 debugger;
   const total = (typeof total) === 'undefined' ? index : total;

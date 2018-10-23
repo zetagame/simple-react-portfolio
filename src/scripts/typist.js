@@ -1,10 +1,13 @@
+
+import $ from 'jquery';
+
 //Credit: Zack Haigh
 const speed = 60;
 let letterIndex = 0;
 let wordIndex = 0;
 let isTyping = true;
 
-window.typist = function(messages, targetElementId) {
+const typist = function(messages, targetElementId) {
   const $targetElementParent = $('#' + targetElementId).parents('.greeting-message');
   let isErasing = !isTyping;
   let isEndOfWord = isTyping ? letterIndex === messages[wordIndex].length : letterIndex === 0;
@@ -69,3 +72,5 @@ window.typist = function(messages, targetElementId) {
     $('.blinking-cursor').css('display', 'none');
   }
 }
+
+export default typist;

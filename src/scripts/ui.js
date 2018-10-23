@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 $(document).ready(function() {
 //pause greeting message.
   $('body').on('click', '.navbar-toggler', function() {

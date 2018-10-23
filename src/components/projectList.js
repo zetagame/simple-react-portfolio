@@ -4,7 +4,7 @@ import ProjectItem from './projectItem';
 const ProjectList = (props) => {
   const projectItems = props.projects.map((project) => {
     return <ProjectItem
-    project = {project}
+    {...project}
     key= {project.title} />
   });
 

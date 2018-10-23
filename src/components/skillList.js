@@ -9,13 +9,13 @@ const SkillList = (props) => {
   });
 
   return(
-    <div id="skills"  className="">
+    <div id="skills">
     <h1 className="text-center">Skills</h1>
       <div className= "row skill-list">
         {skillItems}
       </div>
       <div className="row">
-        <a className="btn btn-default download-button" href="http://zackhaighdesign.com/my_files/resumezh2018.pdf">Printer Friendly Version</a>
+        <a className="btn btn-default download-button" href="https://zackhaighdesign.com/my_files/resumezh2018.pdf">Printer Friendly Version</a>
       </div>
     </div>
   );

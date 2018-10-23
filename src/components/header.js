@@ -1,4 +1,5 @@
-import React, {Component} from 'react';
+import React from 'react';
+import $ from 'jquery';
 
 const Header = () => {
   $(function () {
@@ -10,7 +11,7 @@ const Header = () => {
     return (
       <nav className="navbar navbar-expand-md my-portfolio fixed-top initial" id="navbar">
         <a className="navbar-brand" href="#">ZH</a>
-        <button className="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#mainNavigation" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button className="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#mainNavigation" aria-label="Navigation toggle">
           <span className="menu-icon fa fa-bars"></span>
         </button>
         <div className="collapse navbar-collapse" id="mainNavigation">

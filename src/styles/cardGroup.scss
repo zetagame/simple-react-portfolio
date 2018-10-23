@@ -1,28 +1,3 @@
-@import 'header.scss';
-@import 'colors.scss';
-@import 'skillList.scss';
-@import 'projectList.scss';
-@import 'particles.scss';
-@import 'greeting.scss';
-@import 'globalAnimations.scss';
-@import 'contact.scss';
-@import 'timeline.scss';
-@import 'fonts.scss';
-
-
-body {
-  background: $lightGray;
-  color: $darkGray;
-  padding-bottom: 80px;
-  font-family: 'SF Pro Display';
-}
-.container, .container-fluid {
-  position: relative;
-  padding-top: 75px;
-}
-.section {
-  position: relative;
-}
 .card-group {
   margin-left: auto;
   margin-right: auto;

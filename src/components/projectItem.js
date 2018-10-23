@@ -1,16 +1,14 @@
-import React from 'react';
+import React from 'react'; 
 
-const ProjectItem = ({project}) => {
-  const title = project.title;
-  const url = project.url;
-  const img = project.img;
-  const description = project.description;
-  const fadeInClass = project.fadeInClass;
+const ProjectItem = (props) => {
+  debugger;
+  const { url, title, description, fadeInClass, img } = props;
+  const renderImage = require(`../img/${img}`);
   return (
     <div className={"card fade-in leading " + fadeInClass}>
       <a href={url}>
         <div className='card-img-wrapper'>
-          <img className="card-img-top" src={img} alt="" />
+          <img className="card-img-top" src={renderImage} alt="" />
         </div>
         <div className="card-body">
           <h5 className="card-title">{title}</h5>

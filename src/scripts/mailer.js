@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 const form = $('#contact form');
 const validationMessages = $('.formMessage');
 const formData = $(form).serialize();

@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 $(document).ready(function() {
   function fadeInItems() {
     $('.fade-in:not(.showFade)').each( function(i){
